@@ -10,5 +10,8 @@ namespace ShepidiSoft.Domain.Entities
     {
         public int MyProperty { get; set; }
         public int MyProperty1 { get; set; }
+        public int MyProperty4 { get; set; }
+        public int MyProperty5 { get; set; }
+        public int MyProperty6 { get; set; }
     }
 }
