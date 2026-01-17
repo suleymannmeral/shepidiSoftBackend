@@ -8,5 +8,6 @@ namespace ShepidiSoft.Domain.Entities
 {
     public sealed class Activity
     {
+        public int MyProperty { get; set; }
     }
 }
