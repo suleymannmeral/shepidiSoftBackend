@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShepidiSoft.Domain.Entities
 {
-    public sealed class Activity
+    internal class Announcenent
     {
-        public int MyProperty { get; set; }
-        public int MyProperty1 { get; set; }
     }
 }
