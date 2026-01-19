@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShepidiSoft.Domain.Entities
+namespace ShepidiSoft.Persistence.Activities
 {
-    internal class Announcenent
+    internal class ActivityRepository
     {
     }
 }

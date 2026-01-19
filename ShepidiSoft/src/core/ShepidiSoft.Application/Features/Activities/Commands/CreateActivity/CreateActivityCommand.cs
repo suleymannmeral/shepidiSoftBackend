@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShepidiSoft.Domain.Entities
+namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity
 {
-    internal class test
+    internal class CreateActivityCommand
     {
     }
 }

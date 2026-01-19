@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using ShepidiSoft.Domain.Entities.Common;
 
-namespace ShepidiSoft.Domain.Entities
+namespace ShepidiSoft.Domain.Entities;
+
+public sealed  class Activity:BaseEntity<int>
 {
-    public sealed class Activity
-    {
-        public int MyProperty { get; set; }
-        public int MyProperty1 { get; set; }
-        public int MyProperty4 { get; set; }
-        public int MyProperty5 { get; set; }
-        public int MyProperty6 { get; set; }
-    }
+    public string Title { get; private set; } = null!;
+    public string Description { get; private set; } = null!;
+    public DateTime Date { get; private set; }
+    public bool IsOnline { get; private set; }
+    public string? Location { get; private set; }  // google meet - zoom vs ..
+    public string? OnlineMeetingUrl { get; private set; }
+
 }
