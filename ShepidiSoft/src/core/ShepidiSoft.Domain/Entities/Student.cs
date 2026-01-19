@@ -9,5 +9,5 @@ public sealed class Student : BaseEntity<int>
 
     // Navigation Properties
     public ICollection<Course> Courses { get; set; } = new List<Course>();
-    //public ICollection<AssignmentSubmission> AssignmentSubmissions { get; set; } = new List<AssignmentSubmission>();
+    public ICollection<AssignmentSubmission> AssignmentSubmissions { get; set; } = new List<AssignmentSubmission>();
 }
