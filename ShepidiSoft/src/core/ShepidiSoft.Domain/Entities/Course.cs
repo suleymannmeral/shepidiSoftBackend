@@ -1,9 +1,10 @@
 ﻿
+using ShepidiSoft.Domain.Entities.Common;
+
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Course
+public sealed class Course:BaseEntity<int>
 {
-    public int Id { get; set; }
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
     public int InstructorId { get; set; }
