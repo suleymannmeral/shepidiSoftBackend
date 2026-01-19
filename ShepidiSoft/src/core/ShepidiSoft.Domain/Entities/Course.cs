@@ -21,12 +21,12 @@ public sealed class Course:BaseEntity<int>
 
     //// Relations
 
-    //// 1 Course -> 1 Instructor
-    //public Instructor Instructor { get; set; } = null!;
+    // 1 Course -> 1 Instructor
+    public Instructor Instructor { get; set; } = null!;
 
     //// 1 Course -> N Assignments
     //public ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
 
-    //// N Course -> N Student
-    //public ICollection<Student> Students { get; set; } = new List<Student>();
+    // N Course -> N Student
+    public ICollection<Student> Students { get; set; } = new List<Student>();
 }
