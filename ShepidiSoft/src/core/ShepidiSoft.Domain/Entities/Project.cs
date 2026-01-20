@@ -12,4 +12,5 @@ public sealed class Project : BaseEntity<int>
     public string? GithubUrl { get; set; } // Kaynak Kod Linki
     public bool IsFeatured { get; set; } = false; // Vitrinde/Öne çıkanlarda gösterilsin mi?
     public DateTime? CompletionDate { get; set; } // Tamamlanma Tarihi
+    public ICollection<ProjectImage> Images { get; set; } = new List<ProjectImage>();
 }
