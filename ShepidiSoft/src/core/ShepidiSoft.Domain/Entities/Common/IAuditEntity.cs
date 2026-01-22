@@ -1,6 +1,4 @@
-﻿
-
-namespace ShepidiSoft.Domain.Entities.Common;
+﻿namespace ShepidiSoft.Domain.Entities.Common;
 
 public interface IAuditEntity
 {
