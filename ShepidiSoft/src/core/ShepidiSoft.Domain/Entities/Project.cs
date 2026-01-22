@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Project : BaseEntity<int>
+public sealed class Project : BaseEntity<int>,IAuditEntity
 {
     public string Title { get; set; } = null!; // Proje Başlığı
     public string Description { get; set; } = null!; // Açıklama
@@ -13,4 +13,6 @@ public sealed class Project : BaseEntity<int>
     public bool IsFeatured { get; set; } = false; // Vitrinde/Öne çıkanlarda gösterilsin mi?
     public DateTime? CompletionDate { get; set; } // Tamamlanma Tarihi
     public ICollection<ProjectImage> Images { get; set; } = new List<ProjectImage>();
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

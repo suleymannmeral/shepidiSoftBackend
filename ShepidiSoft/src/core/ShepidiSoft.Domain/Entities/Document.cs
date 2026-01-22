@@ -3,7 +3,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Document : BaseEntity<int>
+public sealed class Document : BaseEntity<int>,IAuditEntity
 {
     public int DocumentTopicId { get; set; }
     public string Title { get; set; } = null!;
@@ -12,6 +12,8 @@ public sealed class Document : BaseEntity<int>
     public DateTime PublishedAt { get; set; }
     public string UploadedByUserId { get; set; } = null!;
 
-    //// Navigation Properties
-    //public DocumentTopic DocumentTopic { get; set; } = null!;
+    // Navigation Properties
+    public DocumentTopic DocumentTopic { get; set; } = null!;
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

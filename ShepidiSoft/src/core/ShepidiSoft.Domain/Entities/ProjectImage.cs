@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class ProjectImage : BaseEntity<int>
+public sealed class ProjectImage : BaseEntity<int>,IAuditEntity
 {
     public string ImageUrl { get; set; } = null!; // Görselin yolu/linki
     public bool IsMain { get; set; } = false; // Ana/Kapak görseli mi?
@@ -14,4 +14,6 @@ public sealed class ProjectImage : BaseEntity<int>
 
     // Navigation Property
     public Project Project { get; set; } = null!;
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

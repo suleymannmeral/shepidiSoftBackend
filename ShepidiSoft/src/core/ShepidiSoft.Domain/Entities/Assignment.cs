@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Assignment : BaseEntity<int>
+public sealed class Assignment : BaseEntity<int>, IAuditEntity
 {
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
@@ -17,4 +17,6 @@ public sealed class Assignment : BaseEntity<int>
 
     // 1 Assignment -> N Submissionsniz)
      public ICollection<AssignmentSubmission> Submissions { get; set; } = new List<AssignmentSubmission>();
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

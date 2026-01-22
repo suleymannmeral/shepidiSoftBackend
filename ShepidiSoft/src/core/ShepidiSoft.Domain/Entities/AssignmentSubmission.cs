@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class AssignmentSubmission : BaseEntity<int>
+public sealed class AssignmentSubmission : BaseEntity<int>,IAuditEntity
 {
     public string SubmissionContent { get; set; } = null!; // Dosya linki veya metin cevabı
     public DateTime SubmissionDate { get; set; } = DateTime.UtcNow;
@@ -16,4 +16,6 @@ public sealed class AssignmentSubmission : BaseEntity<int>
     // Navigation Properties
     public Assignment Assignment { get; set; } = null!;
     public Student Student { get; set; } = null!;
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

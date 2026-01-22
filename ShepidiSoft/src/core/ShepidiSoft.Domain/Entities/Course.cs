@@ -3,7 +3,7 @@ using ShepidiSoft.Domain.Entities.Common;
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Course:BaseEntity<int>
+public sealed class Course:BaseEntity<int>,IAuditEntity
 {
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
@@ -29,4 +29,6 @@ public sealed class Course:BaseEntity<int>
 
     // N Course -> N Student
     public ICollection<Student> Students { get; set; } = new List<Student>();
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }

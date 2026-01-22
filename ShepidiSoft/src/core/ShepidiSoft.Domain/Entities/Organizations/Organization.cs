@@ -2,9 +2,11 @@
 
 namespace ShepidiSoft.Domain.Entities.Organizations;
 
-public sealed class Organization:BaseEntity<int>
+public sealed class Organization:BaseEntity<int>,IAuditEntity
 {
     public string Name { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string? LogoUrl { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime? Updated { get; set; }
 }
