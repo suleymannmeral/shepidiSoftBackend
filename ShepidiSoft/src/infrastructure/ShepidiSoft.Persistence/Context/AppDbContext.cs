@@ -1,9 +1,6 @@
-﻿
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShepidiSoft.Domain.Entities;
 using ShepidiSoft.Domain.Entities.Organizations;
-using System.Collections;
 using System.Reflection;
 
 namespace ShepidiSoft.Persistence.Context;
