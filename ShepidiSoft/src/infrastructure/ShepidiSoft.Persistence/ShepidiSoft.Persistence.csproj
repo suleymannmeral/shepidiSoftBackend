@@ -17,22 +17,5 @@
 	<ItemGroup>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Announcements\" />
-	  <Folder Include="Assignments\" />
-	  <Folder Include="ContactMessages\" />
-	  <Folder Include="Courses\" />
-	  <Folder Include="Documents\" />
-	  <Folder Include="DocumentTopics\" />
-	  <Folder Include="Instructors\" />
-	  <Folder Include="AssignmentSubmissions\" />
-	  <Folder Include="OrganizationMember\" />
-	  <Folder Include="OrganizationPositions\" />
-	  <Folder Include="Organizations\" />
-	  <Folder Include="Students\" />
-	  <Folder Include="ProjectImages\" />
-	  <Folder Include="Projects\" />
-	  <Folder Include="Offerings\" />
-	</ItemGroup>
 
 </Project>

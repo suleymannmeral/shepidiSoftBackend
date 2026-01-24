@@ -8,6 +8,35 @@ public sealed class OrganizationPositionConfiguration : IEntityTypeConfiguration
 {
     public void Configure(EntityTypeBuilder<OrganizationPosition> builder)
     {
-        throw new NotImplementedException();
+        builder.HasKey(x => x.Id);
+
+        builder.Property(x => x.Name)
+            .IsRequired()
+            .HasMaxLength(200);
+
+        builder.Property(x => x.IsActive)
+            .IsRequired()
+            .HasDefaultValue(true);
+
+        builder.Property(x => x.Created)
+            .IsRequired();
+
+        builder.Property(x => x.Updated);
+
+        // Relationship: OrganizationPosition -> OrganizationMemberPositions (One-to-Many)
+        builder.HasMany(x => x.Members)
+            .WithOne(m => m.OrganizationPosition)
+            .HasForeignKey(m => m.OrganizationPositionId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // Unique Constraint: Pozisyon adı benzersiz olmalı
+        builder.HasIndex(x => x.Name)
+            .IsUnique();
+
+        // Index'ler
+        builder.HasIndex(x => x.IsActive);
+
+        // Composite index - Aktif pozisyonlar
+        builder.HasIndex(x => new { x.IsActive, x.Name });
     }
 }
