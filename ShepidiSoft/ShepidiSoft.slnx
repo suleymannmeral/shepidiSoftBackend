@@ -8,6 +8,7 @@
     <Project Path="src/core/ShepidiSoft.Domain/ShepidiSoft.Domain.csproj" />
   </Folder>
   <Folder Name="/src/infrastructure/">
+    <Project Path="ShepidiSoft.Identity/ShepidiSoft.Identity.csproj" Id="195e7e66-19a1-43d7-8d6d-e335f4efd63f" />
     <Project Path="src/infrastructure/ShepidiSoft.Persistence/ShepidiSoft.Persistence.csproj" />
   </Folder>
 </Solution>

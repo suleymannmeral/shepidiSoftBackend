@@ -1,10 +1,11 @@
+using ShepidiSoft.API.Extensions;
 using ShepidiSoft.Persistence.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddPersistenceExt(builder.Configuration);
 builder.Services.AddControllers();
+builder.Services.AddPersistenceExt(builder.Configuration).AddIdentityExt();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
