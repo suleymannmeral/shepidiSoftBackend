@@ -1,24 +1,23 @@
 ﻿using ShepidiSoft.Identity.Models;
 using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.API.Extensions
+namespace ShepidiSoft.API.Extensions;
+
+public static class IdentityExtensions
 {
-    public static class IdentityExtensions
+    public static IServiceCollection AddIdentityExt(this IServiceCollection services)
     {
-        public static IServiceCollection AddIdentityExt(this IServiceCollection services)
+        services.AddIdentity<ApplicationUser, Role>(options =>
         {
-            services.AddIdentity<ApplicationUser, Role>(options =>
-            {
-                options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 6;
-                options.Password.RequireUppercase = false;
-                options.User.RequireUniqueEmail = true;
-            })
-            .AddEntityFrameworkStores<AppDbContext>();
+            options.Password.RequireDigit = false;
+            options.Password.RequiredLength = 6;
+            options.Password.RequireUppercase = false;
+            options.User.RequireUniqueEmail = true;
+        })
+        .AddEntityFrameworkStores<AppDbContext>();
 
 
-            return services;
-        }
-
+        return services;
     }
+
 }
