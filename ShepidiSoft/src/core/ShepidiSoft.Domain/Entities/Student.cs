@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities;
 
-public sealed class Student : BaseEntity<int>,IAuditEntity
+public sealed class Student : BaseEntity<Guid>,IAuditEntity
 {
     public string UserId { get; set; } = null!;
     public DateTime RegisteredAt { get; set; } = DateTime.UtcNow;

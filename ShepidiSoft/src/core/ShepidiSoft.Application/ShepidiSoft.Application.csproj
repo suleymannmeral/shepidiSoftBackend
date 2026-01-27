@@ -7,7 +7,71 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Activities\Commands\DeleteAnnouncement\" />
+    <Folder Include="Features\Activities\Commands\UpdateAnnouncement\" />
     <Folder Include="Features\Activities\Queries\" />
+    <Folder Include="Features\Announcements\Commands\CreateAnnouncement\" />
+    <Folder Include="Features\Announcements\Commands\DeleteAnnouncement\" />
+    <Folder Include="Features\Announcements\Commands\UpdateAnnouncement\" />
+    <Folder Include="Features\Announcements\Queries\" />
+    <Folder Include="Features\AssignmentSubmission\Commands\CreateAssignmentSubmission\" />
+    <Folder Include="Features\AssignmentSubmission\Commands\DeleteAssignmentSubmission\" />
+    <Folder Include="Features\AssignmentSubmission\Commands\UpdateAssignmentSubmission\" />
+    <Folder Include="Features\AssignmentSubmission\Queries\" />
+    <Folder Include="Features\Assignments\Commands\CreateAssignment\" />
+    <Folder Include="Features\Assignments\Commands\DeleteAssignment\" />
+    <Folder Include="Features\Assignments\Commands\UpdateAssignment\" />
+    <Folder Include="Features\Assignments\Queries\" />
+    <Folder Include="Features\ContactMessages\Commands\CreateContactMessage\" />
+    <Folder Include="Features\ContactMessages\Commands\DeleteContactMessage\" />
+    <Folder Include="Features\ContactMessages\Commands\UpdateContactMessage\" />
+    <Folder Include="Features\ContactMessages\Queries\" />
+    <Folder Include="Features\Courses\Commands\CreateCourse\" />
+    <Folder Include="Features\Courses\Commands\DeleteCourse\" />
+    <Folder Include="Features\Courses\Commands\UpdateCourse\" />
+    <Folder Include="Features\Courses\Queries\" />
+    <Folder Include="Features\Documents\Commands\CreateDocument\" />
+    <Folder Include="Features\Documents\Commands\DeleteDocument\" />
+    <Folder Include="Features\Documents\Commands\UpdateDocument\" />
+    <Folder Include="Features\Documents\Queries\" />
+    <Folder Include="Features\DocumentTopics\Commands\CreateDocumentTopic\" />
+    <Folder Include="Features\DocumentTopics\Commands\DeleteDocumentTopic\" />
+    <Folder Include="Features\DocumentTopics\Commands\UpdateDocumentTopic\" />
+    <Folder Include="Features\DocumentTopics\Queries\" />
+    <Folder Include="Features\Instructors\Commands\CreateInstructor\" />
+    <Folder Include="Features\Instructors\Commands\DeleteInstructor\" />
+    <Folder Include="Features\Instructors\Commands\UpdateInstructor\" />
+    <Folder Include="Features\Instructors\Queries\" />
+    <Folder Include="Features\Offerings\Commands\CreateOffering\" />
+    <Folder Include="Features\Offerings\Commands\DeleteOffering\" />
+    <Folder Include="Features\Offerings\Commands\UpdateOffering\" />
+    <Folder Include="Features\Offerings\Queries\" />
+    <Folder Include="Features\OrganizationMembers\Commands\CreateOrganizationMember\" />
+    <Folder Include="Features\OrganizationMembers\Commands\DeleteOrganizationMember\" />
+    <Folder Include="Features\OrganizationMembers\Commands\UpdateOrganizationMember\" />
+    <Folder Include="Features\OrganizationMembers\Queries\" />
+    <Folder Include="Features\OrganizationPositions\Commands\CreateOrganizationPosition\" />
+    <Folder Include="Features\OrganizationPositions\Commands\DeleteOrganizationPosition\" />
+    <Folder Include="Features\OrganizationPositions\Commands\UpdateOrganizationPosition\" />
+    <Folder Include="Features\OrganizationPositions\Queries\" />
+    <Folder Include="Features\Organizations\Commands\UpdateOrganization\" />
+    <Folder Include="Features\Organizations\Queries\" />
+    <Folder Include="Features\ProjectImages\Commands\CreateProjectImage\" />
+    <Folder Include="Features\ProjectImages\Commands\DeleteProjectImage\" />
+    <Folder Include="Features\ProjectImages\Commands\UpdateProjectImage\" />
+    <Folder Include="Features\ProjectImages\Queries\" />
+    <Folder Include="Features\Projects\Commands\CreateProject\" />
+    <Folder Include="Features\Projects\Commands\DeleteProject\" />
+    <Folder Include="Features\Projects\Commands\UpdateProject\" />
+    <Folder Include="Features\Projects\Queries\" />
+    <Folder Include="Features\Students\Commands\CreateStudent\" />
+    <Folder Include="Features\Students\Commands\DeleteStudent\" />
+    <Folder Include="Features\Students\Commands\UpdateStudent\" />
+    <Folder Include="Features\Students\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShepidiSoft.Domain\ShepidiSoft.Domain.csproj" />
   </ItemGroup>
 
 </Project>

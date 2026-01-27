@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.AssignmentSubmissions
+namespace ShepidiSoft.Persistence.AssignmentSubmissions;
+
+public sealed class AssignmentSubmissionRepository(AppDbContext context) : GenericRepository<Assignment, int>(context), IAssignmentRepository
 {
-    internal class AssignmentSubmissionRepository
-    {
-    }
 }

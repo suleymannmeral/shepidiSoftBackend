@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Domain.Entities.Organizations;
 
-namespace ShepidiSoft.Application.Contracts.Persistence
+namespace ShepidiSoft.Application.Contracts.Persistence;
+
+public interface IOrganizationRepository:IGenericRepository<Organization,int>
 {
-    internal interface IOrganizationRepository
-    {
-    }
 }

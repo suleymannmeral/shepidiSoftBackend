@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.DocumentTopics
+namespace ShepidiSoft.Persistence.DocumentTopics;
+
+public sealed class DocumentTopicRepository(AppDbContext context) : GenericRepository<DocumentTopic, int>(context), IDocumentTopicRepository
 {
-    internal class DocumentTopicRepository
-    {
-    }
 }

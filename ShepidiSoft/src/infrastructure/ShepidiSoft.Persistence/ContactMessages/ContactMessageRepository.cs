@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.ContactMessages
+namespace ShepidiSoft.Persistence.ContactMessages;
+
+public sealed class ContactMessageRepository(AppDbContext context) : GenericRepository<ContactMessage, int>(context), IContactMessageRepository
 {
-    internal class ContactMessageRepository
-    {
-    }
 }

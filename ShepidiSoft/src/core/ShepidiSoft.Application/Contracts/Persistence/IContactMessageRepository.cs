@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using ShepidiSoft.Domain.Entities;
 
-namespace ShepidiSoft.Application.Contracts.Persistence
+namespace ShepidiSoft.Application.Contracts.Persistence;
+
+public interface IContactMessageRepository:IGenericRepository<ContactMessage,int>
 {
-    internal interface IContactMessageRepository
-    {
-    }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities.Organizations;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.Organizations
+namespace ShepidiSoft.Persistence.Organizations;
+
+public sealed class OrganizationRepository(AppDbContext context) : GenericRepository<Organization, int>(context), IOrganizationRepository
 {
-    internal class OrganizationRepository
-    {
-    }
 }

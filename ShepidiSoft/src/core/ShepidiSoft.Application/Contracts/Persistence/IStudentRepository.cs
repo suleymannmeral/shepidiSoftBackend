@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace ShepidiSoft.Application.Contracts.Persistence
+using ShepidiSoft.Domain.Entities;
+
+namespace ShepidiSoft.Application.Contracts.Persistence;
+
+public interface IStudentRepository:IGenericRepository<Student,Guid>
 {
-    internal interface IStudentRepository
-    {
-    }
 }

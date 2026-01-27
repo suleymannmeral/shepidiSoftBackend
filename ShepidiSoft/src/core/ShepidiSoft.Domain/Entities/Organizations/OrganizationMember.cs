@@ -2,7 +2,7 @@
 
 namespace ShepidiSoft.Domain.Entities.Organizations;
 
-public sealed class OrganizationMember:BaseEntity<int>,IAuditEntity
+public sealed class OrganizationMember:BaseEntity<Guid>,IAuditEntity
 {    public Guid UserId { get; set; }
     public ICollection<OrganizationMemberPosition> Positions { get; set; }
     public DateTime Created { get; set; }

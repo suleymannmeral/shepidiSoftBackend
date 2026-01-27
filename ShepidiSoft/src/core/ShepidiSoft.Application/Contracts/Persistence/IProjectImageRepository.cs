@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Domain.Entities;
 
-namespace ShepidiSoft.Application.Contracts.Persistence
+namespace ShepidiSoft.Application.Contracts.Persistence;
+
+public interface IProjectImageRepository:IGenericRepository<ProjectImage,int>
 {
-    internal interface IProjectImageRepository
-    {
-    }
 }

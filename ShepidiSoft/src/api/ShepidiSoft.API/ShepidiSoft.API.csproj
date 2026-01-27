@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\infrastructure\ShepidiSoft.Identity\ShepidiSoft.Identity.csproj" />
     <ProjectReference Include="..\..\infrastructure\ShepidiSoft.Persistence\ShepidiSoft.Persistence.csproj" />
   </ItemGroup>

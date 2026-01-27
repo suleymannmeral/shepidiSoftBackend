@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.Students
+namespace ShepidiSoft.Persistence.Students;
+
+public sealed class StudentRepository(AppDbContext context) : GenericRepository<Student, Guid>(context), IStudentRepository
 {
-    internal class StudentRepository
-    {
-    }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
 
-namespace ShepidiSoft.Persistence.Projects
+namespace ShepidiSoft.Persistence.Projects;
+
+public sealed class ProjectRepository(AppDbContext context) : GenericRepository<Project, int>(context), IProjectRepository
 {
-    internal class ProjectRepository
-    {
-    }
 }

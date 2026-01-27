@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace ShepidiSoft.Persistence.ProjectImages
+using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Domain.Entities;
+using ShepidiSoft.Persistence.Context;
+
+namespace ShepidiSoft.Persistence.ProjectImages;
+
+public sealed class ProjectImageRepository(AppDbContext context) : GenericRepository<ProjectImage, int>(context), IProjectImageRepository
 {
-    internal class ProjectImageRepository
-    {
-    }
 }
