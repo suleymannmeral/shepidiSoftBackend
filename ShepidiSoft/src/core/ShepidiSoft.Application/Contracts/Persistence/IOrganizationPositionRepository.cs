@@ -1,6 +1,8 @@
 ﻿
+using ShepidiSoft.Domain.Entities.Organizations;
+
 namespace ShepidiSoft.Application.Contracts.Persistence;
 
-internal interface IOrganizationPositionRepository
+public interface IOrganizationPositionRepository:IGenericRepository<OrganizationPosition,int>
 {
 }
