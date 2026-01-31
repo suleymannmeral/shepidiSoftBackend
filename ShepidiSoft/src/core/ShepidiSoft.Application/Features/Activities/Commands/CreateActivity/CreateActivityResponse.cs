@@ -1,6 +1,4 @@
 ﻿namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity;
 
-public sealed class CreateActivityCommandHandler
-{
+public sealed record CreateActivityResponse(int Id);
 
-}

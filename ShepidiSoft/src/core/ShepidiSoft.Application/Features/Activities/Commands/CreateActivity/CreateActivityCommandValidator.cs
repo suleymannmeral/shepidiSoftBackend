@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity;
 
-namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity
+public  sealed class CreateActivityCommandValidator
 {
-    internal class CreateActivityCommandValidator
-    {
-    }
 }

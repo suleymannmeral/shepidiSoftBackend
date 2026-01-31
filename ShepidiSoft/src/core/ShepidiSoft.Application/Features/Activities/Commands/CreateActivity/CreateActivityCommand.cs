@@ -1,6 +1,31 @@
 ﻿
+using MediatR;
+
 namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity;
 
-public sealed class CreateActivityCommand
-{
-}
+public sealed record CreateActivityCommand()
+    : IRequest<CreateActivityResponse>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
