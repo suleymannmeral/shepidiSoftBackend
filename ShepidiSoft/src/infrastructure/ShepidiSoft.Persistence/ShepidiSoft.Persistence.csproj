@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\ShepidiSoft.Application\ShepidiSoft.Application.csproj" />
+    <ProjectReference Include="..\..\core\ShepidiSoft.ApplWication\ShepidiSoft.Application.csproj" />
     <ProjectReference Include="..\..\core\ShepidiSoft.Domain\ShepidiSoft.Domain.csproj" />
     <ProjectReference Include="..\ShepidiSoft.Identity\ShepidiSoft.Identity.csproj" />
   </ItemGroup>

@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ShepidiSoft.Application.Contracts.Persistence;
+using ShepidiSoft.Persistence.Activities;
 using ShepidiSoft.Persistence.Context;
 using ShepidiSoft.Persistence.Options;
 
@@ -23,7 +25,7 @@ public static class DependencyInjection
             });
         });
 
-
+        services.AddScoped<IActivityRepository, ActivityRepository>();
 
         return services;
     }
