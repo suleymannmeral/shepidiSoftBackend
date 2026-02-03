@@ -66,4 +66,4 @@ public class ServiceResult
         StatusCode = statusCode
     };
 
-}s
+}

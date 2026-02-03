@@ -9,6 +9,7 @@ public class ApplicationUser : IdentityUser<Guid>
     public string LastName { get; set; } = default!;
     public string? LinkednUrl { get; set; } 
     public string? GithubUrl { get; set; } 
+    public string? YoutubeUrl { get; set; } 
     public DateTime DateOfBirth { get; set; }
     public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

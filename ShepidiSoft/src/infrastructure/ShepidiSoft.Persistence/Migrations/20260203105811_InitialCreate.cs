@@ -71,6 +71,9 @@ namespace ShepidiSoft.Persistence.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LinkednUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GithubUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    YoutubeUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -168,8 +171,7 @@ namespace ShepidiSoft.Persistence.Migrations
                 name: "OrganizationMembers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -237,8 +239,7 @@ namespace ShepidiSoft.Persistence.Migrations
                 name: "Students",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     RegisteredAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -338,7 +339,7 @@ namespace ShepidiSoft.Persistence.Migrations
                 name: "OrganizationMemberPositions",
                 columns: table => new
                 {
-                    OrganizationMemberId = table.Column<int>(type: "int", nullable: false),
+                    OrganizationMemberId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     OrganizationPositionId = table.Column<int>(type: "int", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -415,7 +416,7 @@ namespace ShepidiSoft.Persistence.Migrations
                 columns: table => new
                 {
                     CourseId = table.Column<int>(type: "int", nullable: false),
-                    StudentId = table.Column<int>(type: "int", nullable: false)
+                    StudentId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -445,7 +446,7 @@ namespace ShepidiSoft.Persistence.Migrations
                     InstructorFeedback = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: true),
                     Grade = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: true),
                     AssignmentId = table.Column<int>(type: "int", nullable: false),
-                    StudentId = table.Column<int>(type: "int", nullable: false),
+                    StudentId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },

@@ -27,8 +27,8 @@ namespace ShepidiSoft.Persistence.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("CourseId", "StudentId");
 
@@ -201,8 +201,8 @@ namespace ShepidiSoft.Persistence.Migrations
                         .HasMaxLength(2000)
                         .HasColumnType("nvarchar(2000)");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("SubmissionContent")
                         .IsRequired()
@@ -595,11 +595,9 @@ namespace ShepidiSoft.Persistence.Migrations
 
             modelBuilder.Entity("ShepidiSoft.Domain.Entities.Organizations.OrganizationMember", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
@@ -622,8 +620,8 @@ namespace ShepidiSoft.Persistence.Migrations
 
             modelBuilder.Entity("ShepidiSoft.Domain.Entities.Organizations.OrganizationMemberPosition", b =>
                 {
-                    b.Property<int>("OrganizationMemberId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OrganizationMemberId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("OrganizationPositionId")
                         .HasColumnType("int");
@@ -789,11 +787,9 @@ namespace ShepidiSoft.Persistence.Migrations
 
             modelBuilder.Entity("ShepidiSoft.Domain.Entities.Student", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
@@ -888,6 +884,9 @@ namespace ShepidiSoft.Persistence.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("YoutubeUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

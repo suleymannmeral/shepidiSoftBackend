@@ -11,7 +11,7 @@ public sealed record CreateActivityCommand(
     string Location,
     string MeetingUrl
     )  // dışarıya ne açılacak
-    : IRequest<CreateActivityResponse>;
+    : IRequest<ServiceResult<CreateActivityResponse>>;
 
 
 

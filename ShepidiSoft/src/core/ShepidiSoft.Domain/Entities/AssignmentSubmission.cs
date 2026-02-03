@@ -11,7 +11,7 @@ public sealed class AssignmentSubmission : BaseEntity<int>,IAuditEntity
 
     // İlişkiler (Foreign Keys)
     public int AssignmentId { get; set; }
-    public int StudentId { get; set; }
+    public Guid StudentId { get; set; }
 
     // Navigation Properties
     public Assignment Assignment { get; set; } = null!;

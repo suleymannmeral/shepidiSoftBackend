@@ -3,6 +3,6 @@
 
 namespace ShepidiSoft.Application.Contracts.Persistence;
 
-public interface IAssignmentSubmissionRepository:IGenericRepository<Assignment,int>
+public interface IAssignmentSubmissionRepository : IGenericRepository<AssignmentSubmission, int>
 {
 }

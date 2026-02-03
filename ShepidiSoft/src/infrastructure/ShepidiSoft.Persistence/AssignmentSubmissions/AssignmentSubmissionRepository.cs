@@ -4,6 +4,6 @@ using ShepidiSoft.Persistence.Context;
 
 namespace ShepidiSoft.Persistence.AssignmentSubmissions;
 
-public sealed class AssignmentSubmissionRepository(AppDbContext context) : GenericRepository<Assignment, int>(context), IAssignmentRepository
+public sealed class AssignmentSubmissionRepository(AppDbContext context) : GenericRepository<AssignmentSubmission, int>(context), IAssignmentSubmissionRepository
 {
 }

@@ -5,12 +5,12 @@ namespace ShepidiSoft.Domain.Entities;
 
 public sealed class Activity : BaseEntity<int>, IAuditEntity
 {
-    public string Title { get; private set; } = null!;
-    public string Description { get; private set; } = null!;
-    public DateTime Date { get; private set; }
-    public bool IsOnline { get; private set; }
-    public string? Location { get; private set; }  // google meet - zoom vs ..
-    public string? OnlineMeetingUrl { get; private set; }
+    public string Title { get; init; } = null!;
+    public string Description { get; init; } = null!;
+    public DateTime Date { get; init; }
+    public bool IsOnline { get; init; }
+    public string? Location { get; init; }  // google meet - zoom vs ..
+    public string? OnlineMeetingUrl { get; init; }
     public DateTime Created { get; set; }
     public DateTime? Updated { get; set; }
 }
