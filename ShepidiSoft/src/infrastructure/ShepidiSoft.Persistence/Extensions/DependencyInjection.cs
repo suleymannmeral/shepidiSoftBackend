@@ -26,6 +26,7 @@ public static class DependencyInjection
         });
 
         services.AddScoped<IActivityRepository, ActivityRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }

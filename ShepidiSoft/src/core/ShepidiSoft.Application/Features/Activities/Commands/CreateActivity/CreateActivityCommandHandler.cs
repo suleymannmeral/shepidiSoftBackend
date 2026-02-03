@@ -1,27 +1,45 @@
 ﻿using MediatR;
 using ShepidiSoft.Application.Contracts.Persistence;
 using ShepidiSoft.Domain.Entities;
-using System.Diagnostics.Metrics;
 
 namespace ShepidiSoft.Application.Features.Activities.Commands.CreateActivity;
 
 public sealed class CreateActivityCommandHandler(
     IActivityRepository activityRepository,
     IUnitOfWork unitOfWork)
-        : IRequestHandler<CreateActivityCommand, ServiceResult<CreateActivityResponse>>
+        : IRequestHandler<CreateActivityCommand, ServiceResult<CreateActivityCommandResponse>>
 {
-    public Task<ServiceResult<CreateActivityResponse>> Handle(CreateActivityCommand request, CancellationToken cancellationToken)
+    public async Task<ServiceResult<CreateActivityCommandResponse>> Handle(CreateActivityCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var activity = CreateActivity(request);
+        await PersistAsync(activity);
+
+        return ServiceResult<CreateActivityCommandResponse>
+           .Success(new CreateActivityCommandResponse(activity.Id));
     }
 
-    private static Activity CreateMeasurement(
+    private static Activity CreateActivity(
 CreateActivityCommand request)
     {
         return new Activity
         {
           Title= request.Title,
+          Description= request.Description,
+          Date=request.Date,
+          IsOnline= request.IsOnline,
+          Location= request.Location,
+          OnlineMeetingUrl=request.MeetingUrl,
+
 
         };
     }
+
+    //Db'ye yansıt
+    private async Task PersistAsync(Activity activity)
+    {
+        await activityRepository.AddAsync(activity);
+        await unitOfWork.SaveChangesAsync();
+    }
 }
+
+   

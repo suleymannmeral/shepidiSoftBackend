@@ -1,11 +1,20 @@
+using Microsoft.AspNetCore.Mvc;
 using ShepidiSoft.API.Extensions;
+using ShepidiSoft.Application.Extensions;
 using ShepidiSoft.Persistence.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddPersistenceExt(builder.Configuration).AddIdentityExt();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<FluentValidationFilter>();
+    options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
+});
+builder.Services.Configure<ApiBehaviorOptions>(options => options.SuppressModelStateInvalidFilter = true);
+
+// Add services to the container.
+builder.Services.AddApplicationExt().AddPersistenceExt(builder.Configuration).AddIdentityExt();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
