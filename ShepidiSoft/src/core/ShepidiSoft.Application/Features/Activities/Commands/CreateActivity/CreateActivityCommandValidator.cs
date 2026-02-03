@@ -28,12 +28,12 @@ public sealed class CreateActivityCommandValidator : AbstractValidator<CreateAct
             .WithMessage("Yüz yüze etkinliklerde konum belirtilmelidir.")
             .MaximumLength(500).WithMessage("Konum en fazla 500 karakter olabilir.");
 
-        RuleFor(x => x.MeetingUrl)
+        RuleFor(x => x.OnlineMeetingUrl)
             .Must((command, url) => !command.IsOnline || !string.IsNullOrWhiteSpace(url))
             .WithMessage("Çevrimiçi etkinliklerde toplantı URL'si belirtilmelidir.")
             .Must((command, url) => command.IsOnline || string.IsNullOrWhiteSpace(url))
             .WithMessage("Yüz yüze etkinliklerde toplantı URL'si belirtilmemelidir.")
-            .Must(BeValidUrl).When(x => !string.IsNullOrWhiteSpace(x.MeetingUrl))
+            .Must(BeValidUrl).When(x => !string.IsNullOrWhiteSpace(x.OnlineMeetingUrl))
             .WithMessage("Geçersiz URL formatıdır.");
     }
 

@@ -9,7 +9,7 @@ public sealed record CreateActivityCommand(
     DateTime Date,
     bool IsOnline,
     string Location,
-    string MeetingUrl
+    string OnlineMeetingUrl
     )  // dışarıya ne açılacak
     : IRequest<ServiceResult<CreateActivityCommandResponse>>;
 

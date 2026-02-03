@@ -6,6 +6,6 @@ namespace ShepidiSoft.Persistence;
 
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
-    public Task<int> SaveChangesAsync() => context.SaveChangesAsync();
+    public Task<int> SaveChangesAsync(CancellationToken token) => context.SaveChangesAsync(token);
 
 }

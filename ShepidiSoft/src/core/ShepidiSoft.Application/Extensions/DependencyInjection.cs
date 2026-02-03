@@ -13,6 +13,16 @@ public static class DependencyInjection
     public static IServiceCollection AddApplicationExt(this IServiceCollection services)
     {
         MediatrExt(services);
+        services.AddFluentValidationAutoValidation();
+
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+
+
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+        services.AddAutoMapper(cfg => { }, Assembly.GetExecutingAssembly());
+
         return services;
     }
 
@@ -21,11 +31,7 @@ public static class DependencyInjection
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
         );
-        services.AddFluentValidationAutoValidation();
-
-        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-
-        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+       
         return services;
     }
 }

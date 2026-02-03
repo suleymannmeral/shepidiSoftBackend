@@ -1,5 +1,3 @@
 namespace ShepidiSoft.Application;
 
-public sealed class ApplicationAssembly
-{
-}
+public struct ApplicationAssembly;

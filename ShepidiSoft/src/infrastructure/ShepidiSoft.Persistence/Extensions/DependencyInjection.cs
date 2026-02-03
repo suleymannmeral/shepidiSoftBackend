@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ShepidiSoft.Application.Contracts.Persistence;
 using ShepidiSoft.Persistence.Activities;
 using ShepidiSoft.Persistence.Context;
+using ShepidiSoft.Persistence.Interceptors;
 using ShepidiSoft.Persistence.Options;
 
 namespace ShepidiSoft.Persistence.Extensions;
@@ -23,6 +24,7 @@ public static class DependencyInjection
             {
                 sqlOptions.MigrationsAssembly(typeof(PersistenceAssembly).Assembly.FullName);
             });
+            options.AddInterceptors(new AuditDbContextInterceptor());
         });
 
         services.AddScoped<IActivityRepository, ActivityRepository>();
